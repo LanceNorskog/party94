@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Party Like It's 1994!
+</title>
+</head>
+<body>
+<h1>Reports</h1>
+<form action="/query" method="get">Query ID: <input type="text" name="queryid"><input type="submit" value="Check a query ID"></form>
+<table>
+<thead></thead>
+<tbody>
+<tr><td><a href="/reports/commit_stats.sql">RUN</a></td><td>Shows information on consumption of cluster resources through COMMIT statements</td></tr>
+<tr><td><a href="/reports/copy_performance.sql">RUN</a></td><td>Shows longest running copy for past 7 days</td></tr>
+<tr><td><a href="/reports/current_session_info.sql">RUN</a></td><td>Query showing information about sessions with currently running queries</td></tr>
+<tr><td><a href="/reports/filter_used.sql">RUN</a></td><td>Return filter applied to tables on scans. To aid on choosing sortkey</td></tr>
+<tr><td><a href="/reports/missing_table_stats.sql">RUN</a></td><td>Query shows EXPLAIN plans which flagged "missing statistics" on the underlying tables</td></tr>
+<tr><td><a href="/reports/perf_alert.sql">RUN</a></td><td>Return top occurrences of alerts, join with table scans</td></tr>
+<tr><td><a href="/reports/table_info.sql">RUN</a></td><td>Return Table storage information (size, skew, etc)</td></tr>
+<tr><td><a href="/reports/table_inspector.sql">RUN</a></td><td>Table Analysis based on content in Analyzing Table Design. Complements table_info.sql</td></tr>
+<tr><td><a href="/reports/top_queries.sql">RUN</a></td><td>Return the top 50 most time consuming statements in the last 7 days</td></tr>
+<tr><td><a href="/reports/unscanned_table_summary.sql">RUN</a></td><td>Summarizes storage consumed by unscanned tables</td></tr>
+</tbody>
+</table>
+<h1>Views</h1>
+<h1>Tasks</h1>
+<form action="/user" method="post">
+<table><tr><td>
+user:</td><td><input type="text" name="queryid"></td>
+</tr><tr>
+</tr></table>
+<input type="submit" value="Set up normal user"></form>
+</td></tr></table><form action="/write" method="post">
+<table><tr><td>
+user:</td><td><input type="text" name="queryid"></td>
+</tr><tr><td>
+schema:</td><td<input type="text" name="queryid"></td>
+</tr></table>
+<input type="submit" value="Give user write access to schema"></form>
+</td></tr></table>
+</body>
+</html>
+
